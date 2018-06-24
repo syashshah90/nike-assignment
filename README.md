@@ -10,6 +10,7 @@ The idea of this assignment is to create JSON extract files from various csv sou
 ## Prerequisites
 
 1. Downloaded sparkscalaassignment_jar.jar from the given link
+-https://drive.google.com/drive/folders/19iYLPJgqbveabGnoztPgavkEivxaDxRr?usp=sharing
 2. Up and running Spark Cluster
 
 ## Step-by-step
