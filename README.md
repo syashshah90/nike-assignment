@@ -19,7 +19,7 @@ The idea of this assignment is to create JSON extract files from various csv sou
 3. Determine the path for your output
 5. Run the following spark-submit command to execute the code
 
-$./bin/spark-submit --class SparkTest \
---master local[*] \
---deploy-mode client \
+$./bin/spark-submit --class SparkTest /\
+--master local[*] /\
+--deploy-mode client /\
 /path-to-jar/sparkscalaassignment_jar.jar /path/input-dir-path /path/output-dir-path
