@@ -3,9 +3,9 @@
 The idea of this assignment is to create JSON extract files from various csv sources based on the conditions (weekly aggregator).
 
 ## Tools and Technologies used
-Spark 2.0.0
-Scala 2.10
-Intellij 2018.1.5 (Community Edition)
+- Spark 2.0.0
+- Scala 2.10
+- Intellij 2018.1.5 (Community Edition)
 
 ## Prerequisites
 
@@ -19,8 +19,7 @@ Intellij 2018.1.5 (Community Edition)
 3. Determine the path for your output
 5. Run the following spark-submit command to execute the code
 
-$./bin/spark-submit \
---class SparkTest \
+$./bin/spark-submit --class SparkTest \
 --master local[*] \
 --deploy-mode client \
 /path-to-jar/sparkscalaassignment_jar.jar /path/input-dir-path /path/output-dir-path
