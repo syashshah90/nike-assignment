@@ -4,8 +4,8 @@ object SparkTest {
   def main(args: Array[String]) {
 
     //specifying input and output data directories
-    val warehouseLocation = "E:\\interview assignments\\nike\\data"
-    val outputDir = warehouseLocation+"\\output"
+    val warehouseLocation = args(0) //input directory path to be fetched from argument 1
+    val outputDir = args(1) //output directory path to be fetched from argument 2
 
     //Initializing Spark session
     val spark = SparkSession.builder
@@ -29,6 +29,7 @@ object SparkTest {
       .join(productDF, salesDF("productId") === productDF("productid"), "left")
       .join(storeDF, salesDF("storeId") === storeDF("storeid"), "inner")
       .join(calendarDF, salesDF("dateId") === calendarDF("datekey"), "inner")
+      .cache()
 
     //Registering temporary view to perform SQL operations on data
     allSalesDF.createOrReplaceTempView("sales")
